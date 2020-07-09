@@ -35,7 +35,7 @@ Research@Bachelor (2017 - 2021.4)
 ## Progress Report
 |Date|修正前報告書URL|修正後報告書のURL|
 |---|---|---|
-|---|---|---|
+|2020,07,10|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Report/%E6%9C%88%E6%9C%AB%E9%80%B2%E6%AD%A9%E5%A0%B1%E5%91%8A%E4%BC%9A.pdf)|---|
 
 ## Journal  
 |Date|Institute|Title|URL|
