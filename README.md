@@ -11,10 +11,13 @@ Research@Bachelor (2017 - 2021.4)
 ### Research@Bachelor (20XX.X　-　20XX.X)     
 |Date|Title|Comment|URL|
 |20200327|faster-rcnn|鈴木さんの引継ぎのためのfasuter-rcnnについて調査|[Link](https://github.com/cu-milab/ra-yasui-2019/commit/6ba84ad8b94200db94f7e259918fda4710923f66)|
-|---|---|---|---|
-|---|---|---|---|
-|---|---|---|---|
-|---|---|---|---|
+|20200416|faster-rcnn2|faster-rcnn調査|[Link](https://github.com/cu-milab/ra-yasui-2019/commit/57375a42f380b9027fe85249ac3aad718e192f5e)|
+|20200430|SSD-6D|SSD-6Dの論文調査|[Link]()|
+|20200521|SSD-6D|SSD-6D調査の続き|[Link]()|
+|20200604|ResNet|ResNetについて|[Link]()|
+|20200618|ResNet|ResNetについて|[Link]()|
+|20200709|Augumented　Autencoder|Augumented　Autencoderについて|[Link](https://github.com/cu-milab/ra-yasui-2019/commit/3fc800ad85f9071ceea004d14103a201c48e4afc)|
+
 
 ### Research@Master (20XX.X　-　20XX.X)       
 |Date|Title|Comment|URL|
