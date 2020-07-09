@@ -10,7 +10,7 @@ Research@Bachelor (2017 - 2021.4)
 ## Meeting  
 ### Research@Bachelor (20XX.X　-　20XX.X)     
 |Date|Title|Comment|URL|
-|20200327|faster-rcnn|鈴木さんの引継ぎのためのfasuter-rcnnについて調査|URL|
+|20200327|faster-rcnn|鈴木さんの引継ぎのためのfasuter-rcnnについて調査|(URL)[https://github.com/cu-milab/ra-yasui-2019/commit/6ba84ad8b94200db94f7e259918fda4710923f66]|
 |---|---|---|---|
 |---|---|---|---|
 |---|---|---|---|
