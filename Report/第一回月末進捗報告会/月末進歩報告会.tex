@@ -1,0 +1,185 @@
+\documentclass[11pt,a4j,ascmac]{jarticle}
+\usepackage{epsf}
+\usepackage[dvips]{graphicx}
+
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{-2.5cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+
+\title{第７月 進捗確認会報告資料\\
+変形ARマーカ認識のための手法調査}
+
+\author{安井　理}
+\date{\today}
+\begin{document}
+\maketitle
+\section{はじめに}
+
+\ 変形ARマーカの読み取りを最終目標とし,今回までは,前任者の鈴木さんがベースとしていたfaster-rcnnの調査とSSD-6D論文の手法の理解を進め.SSD-6Dでは実装が可能かどうか調べた.結果として,トーレーニングコードのコードが乗っていなく実装することは,現実的ではなかったため,論文の理解を一通りするところまで行い,次の調査,実装に向けて新しい論文調査をする方針にした.\ 
+
+\section{進歩報告}
+
+\subsection{調査内容}
+
+今回調査した手法及び論文は以下である.
+
+\begin{description}
+    \item[・　Faster-RCNN]
+    \item[・　SSD-6D]Making RGB-based 3D detection and 6D pose estimation great again
+\end{description}
+
+
+\subsection{Faster-RCNN}
+
+\subsubsection{Faster-RCNNを用いた先行研究}
+
+\  先行研究でFaster-RCNNを用いて鈴木さんが行った研究内容として,主に3つである.次のステップとしてARマーカの四隅の座標,回転方向の推定を計算できるようにすることである.
+
+\begin{description}
+    \item[・　Faster-RCNNの正常性の確認]環境画像に張り付けたARマーカの読み取り
+    \item[・　Faster-RCNNの応用]アーチ状,旗状,円状,に変化させたARマーカの読み取り
+    \item[・　研究目的の読み取り]仮想空間で円柱に張り付けたARマーカの検出
+\end{description}
+
+
+
+\subsubsection{Faster-RCNNとは}
+
+\  大きく特徴マップを抽出するConvolutional Layerと物体領域を抽出するRPNに加え分類,回帰の結果を出力するネットワークで構成されている.学習のポイントは,ある矩形が背景なのか物体なのか,検出されたものが物体だった場合にそれが何かの点である.特徴的なのが背景か物体かの学習を行う際にRPN（Resion Proposal Network）と呼ばれるCNNの構造である.
+
+    \begin{figure}[htpp]
+     \centering
+      \includegraphics[width=50mm]{Faster-RCN.eps}
+      \vspace*{30mm}
+      \caption{二次元姿勢推定．}
+      \label{fig:2d_pose_estimation}
+    \end{figure}
+
+
+\subsubsection{RPN}
+\  Region Proposal Networkは画像内から物体領域の候補となる箇所を抽出する.元々は「Fast RCNN」ではこの物体領域抽出にSelective Searchと呼ばれる手法を使っていたため,物体候補領域の抽出に時間がかかかっていたが,その箇所もEnd-to-Endによる実装で従来より高速・精度改善される.主な処理は下記の3つである.
+
+
+\begin{description}
+    \item[・　物体の候補領域を見つけるAncherを作成]
+    \item[・　（学習時）誤差を計算]
+    \item[・　候補の中からNMSなどを実施して、Region Proposal Networkでの物体の候補領域を抽出]
+\end{description}
+
+
+
+\subsubsection{Anchor}
+\   Anchorと呼ばれる領域を生成→物体の領域を示している矩形.これらを画像内に一定間隔で生成する.これは学習時に使われるLoss Functionで使われる.
+
+    \begin{figure}[htpp]
+     \centering
+      \includegraphics[width=50mm]{RPN.eps}
+      \vspace*{30mm}
+      \caption{Anchor．}
+      \label{fig:2d_pose_estimation}
+    \end{figure}
+
+
+
+\subsubsection{Loss Function}
+\  RPN自身を更新するための誤差を計算し,ニューラルネットワークの全体の誤差と併せて更新される.以下の式で表される.
+
+
+
+\begin{eqnarray}
+\label{eq:polynomial1}
+L({p_i},{t_i}) &=& \frac{1}{N_{cls}} \sum_{i}L_{cls}(p_i,p_i*)+λ\frac{1}{N_{reg}} \sum_{i}L_{reg}(t_i,t_i*)
+\end{eqnarray}
+
+\  RPNの誤差は基本的には２つの要素で成り立っている,①その領域は物体か背景であるか②どこに領域があるかの領域の位置（詳細）を計算.②のバウンディングボックスの決定はAncherと物体のIoUが0.7以上の場合物体であることを示す.IoUが0.3以下では物体が存在しないことを示す.\ 
+
+
+
+\subsection{SSD-6D}
+
+\ 
+
+
+\subsubsection{SSD-6D とは}
+\  ディープラーニングの分野で画像の分類と検出は大幅に進歩しているが6次元の姿勢推定はまだ伸びしろのある分野である,座標認識と物体の回転座標の認識は自分の研究テーマにおける変形ARマーカの推定に必要なものであり,今回２０１７年の6次元物体認識のコンテスト（ECCV１７）で Best Paper Awardをとった論文の手法を調べていくことにした.\ 
+\  6次元の姿勢推定とは３次元空間のX,Y,Z,3座標にそれぞれ回転軸を加えたものであり,６自由度の方向推定である.\ 
+\  6次元姿勢推定はすべて合成モデルデータのみでトレーニングを行いRGB画像のみで推定をすることができる,SSDを拡張したもので,複雑なデータを扱う方法に匹敵するかそれ以上の精度の認識を行えるもの.\\
+
+    \begin{figure}[htpp]
+     \centering
+      \includegraphics[width=60mm,angle=90]{SSD.eps}
+      \vspace*{30mm}
+      \caption{SSD-6D全体．}
+      \label{SSD-6D全体}
+    \end{figure}
+
+
+
+\subsubsection{ネットワーク}
+\  ２９９*２９９のカラー画像を入力とし,事前にトレーニングされたInceptionV4にかけ,その後複数の縮尺のフィーチャーマップを用意し,［71*71*84 $\Rightarrow$  Inception・A］［Inception・A*35*35*384 $\Rightarrow$ Inception・B］[ Inception・B*17*17*1024 $\Rightarrow$ Inception・C][Inception・C*9*9*1536]と小さい特徴から順に大きい物の特徴へと特徴を抽出していく。より大きな特徴を抽出するために5*5*1024のフィルタと3*3*1024のフィルタにさらに通していく.\ 
+    \begin{figure}[htpp]
+     \centering
+      \includegraphics[width=30mm,angle=90]{SSNet.eps}
+      \vspace*{25mm}
+      \caption{SSD-6Dのネットワーク．}
+      \label{SSD-6Dのネットワーク}
+    \end{figure}
+
+
+\subsubsection{検出}
+
+\  検出特徴を得たらそれぞれの特徴マップをトレーニング済みの予測カーネルC・４・V・R（オブジェクトクラス・バウンディングボックス・視点・画内回転）に通す.全結合層の部分に値する場所である.\ 
+ 特徴マップからまず,位置の推定予想が行われる,想定するのは物体の高さ,幅,チャンネルの深さの３つを求めバウンディングボックスを推定,そこから物体のID(分類),物体の視点（画内回転）,ボックスの一致度を評価,バウンディングボックスは各,ピクセルに高さ幅3*3の9つの大きさのboxを用意し最も一致度の高いバウンディングボックスを選択する.\ 
+    \begin{figure}[htpp]
+      \centering
+      \includegraphics[width=50mm]{SA.eps}
+      \vspace*{25mm}
+      \caption{ボックス検出．}
+      \label{ボックス検出}
+    \end{figure}\ 
+
+
+
+\subsubsection{推定}
+\  ネットワークで出力されたボックスの特定のしきい値を超えた検出を収集してからハードネガティブマイニングを行う,
+これにより適切なバウンディングボックスが選択される.これらの選ばれたboxから分類・画内回転のそれぞれのIDをもとに6次元の推定を行う.事前に計算した物体の視点ごとのバウンディングボックスの対角線をlr,ネットワークで予想されたバウンディングボックスの対角線をlsとして物体との距離をzr=0.5ｍで計算をする.　ｚs＝lr/ls*zrと表現でき用意されたカメラでインライン関数を用いて投影の重心位置を推定し逆投影することが可能になる\ 
+
+    \begin{figure}[htpp]
+     \centering
+      \includegraphics[width=30mm,angle=90]{SU.eps}
+      \vspace*{15mm}
+      \caption{SSD-6D推定．}
+      \label{SSD-6D推定}
+    \end{figure}
+
+
+\ 
+\ 
+\ 
+
+\subsection{終わりに}
+\  今後は実装していけるように現実的に使える論文を読んで理解し進めていく.ペースが少し遅いのでスピードアップもしていきたい.次はRGBデータを用いた6次元の物体推定の論文が使えるか調べてから次に,何をするのか考え進めていく.
+
+\footnotesize
+
+\begin{thebibliography}{9}
+\bibitem{SSD-6D}SSD-6D, https://openaccess.thecvf.com/
+\bibitem{Faster-RCN}
+Faster-RCN, https://medium.com/lsc-psd/faster-r-cnn/
+                   
+\bibitem{Faster-RCN}
+Faster-RCN, https://nonbiri-tereka.hatenablog.com/
+
+
+
+\end{thebibliography}
+
+\normalsize
+
+\end{document}
+
+
+
