@@ -26,6 +26,7 @@ Research@Bachelor (2017 - 2021.4)
 
 ### Research@Master (20XX.X　-　20XX.X)       
 |Date|Title|Comment|URL|
+|---|---|---|
 |6月末進捗報告会|Faster.SSD-6D|[Link]https://github.com/cu-milab/ra-yasui-2019/tree/master/Report/%E7%AC%AC%E4%B8%80%E5%9B%9E%E6%9C%88%E6%9C%AB%E9%80%B2%E6%8D%97%E5%A0%B1%E5%91%8A%E4%BC%9A|
 |7月末進捗報告会|AAE|[Link]https://github.com/cu-milab/ra-yasui-2019/tree/master/Report/%E7%AC%AC%E4%BA%8C%E5%9B%9E%E9%80%B2%E6%8D%97%E5%A0%B1%E5%91%8A%E4%BC%9A|
 
