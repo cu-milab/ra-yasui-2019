@@ -1,0 +1,196 @@
+This is e-pTeX, Version 3.14159265-p3.7.2-170924-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.12.1)  4 OCT 2020 13:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./untitled-1.tex
+(./untitled-1.tex
+pLaTeX2e <2017/10/28>+2 (based on LaTeX2e <2017-04-15>)
+Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
+(c:/w32tex/share/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2017/09/19 v1.7g Standard pLaTeX class
+\c@@paper=\count82
+(c:/w32tex/share/texmf-dist/tex/platex/base/jsize11.clo
+File: jsize11.clo 2017/09/19 v1.7g Standard pLaTeX file (size option)
+)
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 613.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count91
+)
+(c:/w32tex/share/texmf-dist/tex/latex/dvips/epsf.sty
+(c:/w32tex/share/texmf-dist/tex/plain/dvips/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen121
+\epsfframethickness=\dimen122
+\epsfrsize=\dimen123
+\epsftmp=\dimen124
+\epsftsize=\dimen125
+\epsfxsize=\dimen126
+\epsfysize=\dimen127
+\pspoints=\dimen128
+)) (c:/w32tex/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/w32tex/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+
+(c:/w32tex/share/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
+(c:/w32tex/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count92
+\float@exts=\toks16
+\float@box=\box42
+\@float@everytoks=\toks17
+\@floatcapt=\box43
+)
+(c:/w32tex/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count93
+\lst@gtempboxa=\box44
+\lst@token=\toks18
+\lst@length=\count94
+\lst@currlwidth=\dimen131
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen132
+\lst@width=\dimen133
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen134
+
+(c:/w32tex/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box45
+)
+(c:/w32tex/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+
+LaTeX Warning: Unused global option(s):
+    [ascmac].
+
+(./untitled-1.aux)
+\openout1 = `untitled-1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+\c@lstlisting=\count101
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 30.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
+ (c:/w32tex/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 48.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 48.
+
+[1
+
+]
+File: pic1.eps Graphic file (type eps)
+ <pic1.eps> [2]
+File: pic3.eps Graphic file (type eps)
+ <pic3.eps>
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 139.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 139.
+ [3]
+File: pic2.eps Graphic file (type eps)
+ <pic2.eps>
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 168.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 168.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+[]\OT1/cmr/m/n/9 Martin Sun-der-meyer Zoltan-Csaba Mar-ton Max-i-m-il-ian Durne
+r Rudolph Triebel \JY1/mc/m/n/9 ，  \OT1/cmr/m/n/9 2018 \JY1/mc/m/n/9 　
+ []
+
+
+Overfull \hbox (34.62189pt too wide) in paragraph at lines 176--177
+[]\OT1/cmr/m/n/9 ``The PAS-CAL Vi-sual Ob-ject Classes Chal-lenge 2007''\JY1/mc
+/m/n/9 ． \OT1/cmr/m/n/9 http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.h
+tml 
+ []
+
+[4] (./untitled-1.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2033 strings out of 493628
+ 27949 string characters out of 6150204
+ 96204 words of memory out of 5000000
+ 5642 multiletter control sequences out of 15000+600000
+ 17229 words of font info for 67 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 26i,7n,32p,649b,964s stack positions out of 5000i,500n,10000p,500000b,80000s
+
+Output written on untitled-1.dvi (4 pages, 11580 bytes).
