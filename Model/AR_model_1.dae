@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.90.0 commit date:2020-08-31, commit time:11:26, hash:0330d1af29c0</authoring_tool>
     </contributor>
-    <created>2020-10-12T17:52:51</created>
-    <modified>2020-10-12T17:52:51</modified>
+    <created>2020-10-13T17:56:39</created>
+    <modified>2020-10-13T17:56:39</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -91,7 +91,7 @@
         <technique sid="common">
           <lambert>
             <emission>
-              <color sid="emission">0 0 0 1</color>
+              <color sid="emission">0.002069049 0.002069049 0.002069049 1</color>
             </emission>
             <diffuse>
               <texture texture="AR_JPG-sampler" texcoord="UVマップ"/>
@@ -187,7 +187,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="平面_001" name="平面.001" type="NODE">
-        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 0.1 -0.01 0 0 0 1</matrix>
+        <matrix sid="transform">50 0 0 0 0 50 0 0 0 0 1 -0.01 0 0 0 1</matrix>
         <instance_geometry url="#平面_001-mesh" name="平面.001">
           <bind_material>
             <technique_common>
