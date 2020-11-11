@@ -23,6 +23,21 @@ Research@Bachelor (2017 - 2021.4)
 |20200730|Augumented　Autencoder|AAEの動作確認と実装について|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20200730/%E7%AC%AC10%E5%9B%9E%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
 |20200821|Augumented　Autencoder|6Dと今後の方針について|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20200821/%E7%AC%AC11%E5%9B%9E%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
 |20200904|Augumented　Autencoder|Tensorflow-gpu動作環境について|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20200904/%E7%AC%AC12%E5%9B%9E%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20200918|Augumented　Autencoder|AAEの学習|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20200918/%E7%AC%AC13%E5%9B%9E%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20201008|Augumented　Autencoder|AAEを用いた姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201008/10%E6%9C%888%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20201015|Augumented　Autencoder|ARマーカモデルの姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201015/10%E6%9C%8815%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20201029|Augumented　Autencoder|AAEを用いた姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201029/10%E6%9C%8829%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20201112|Augumented　Autencoder|変形ARマーカに対するAAE|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201112/11%E6%9C%8812%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+
+
+
+
+
+
+
+
+
+
 
 
 
