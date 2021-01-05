@@ -1,0 +1,116 @@
+\documentclass{jsarticle}
+\usepackage{abst, epsf,graphicx, tabularx, ascmac}
+%\usepackage{comment}
+
+\newcommand{\bd}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\mysubsec}[1]{\noindent {\bf #1} \ \ }
+\newcommand{\down}[1]{\raisebox{-0.0mm}{{\scriptsize #1}}}
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+
+\title{変形ARマーカの認識及び姿勢推定}
+\prof{山内 悠嗣}
+\name{ER17076 安井理}
+
+\begin{document}
+\maketitle
+
+%-------------------------------------------------------------------------
+\sec{はじめに}
+キャッシュレス決済や物品管理，広告，ロボットの認識機能等の分野で QR コードや AR マーカに代表される 2 次
+元コードが利用されている．2 次元コードには，数百から数千バイトの情報を埋め込むことができ，シンボルと呼ばれる特殊なパターンによって視点が変化しても高精度な検出が可能である．さらに，2 次元コードの大きさを事前に定義すればカメラの位置・姿勢を推定することができる．しかし，2 次元コードは平面に貼ることを前提条件として
+おり，曲面に貼られた 2 次元コードは歪みによる見えの変化を引き起こすため，認識精度が低下する問題を抱えてい
+る．
+\\そこで，本研究では機械学習により変形した AR マーカを認識及び姿勢推定を行う手法を提案する．変形したARマーカの画像をSingle Shot MultiBox Detector(SSD)[1]により学習することで，歪みを持つマーカを正確に検出し，ID，座標，大きさを推定し，Augumented Autencoder(AAE)[2]による学習で，歪んだARマーカの姿勢の推定を行う．
+
+
+\sec{SSDとAAEを用いた姿勢推定}
+　図\ref{flow}は，提案手法による変形ARマーカの認識及び姿勢推定の流れを示す．本研究ではARマーカの検出と認識に物体検出手法であるSingle Shot MultiBox Detector（SSD）を学習することによりARマーカの画内座標位置，カテゴリの種類を求める．ARマーカの姿勢をAugumented Autencoder（AAE）を学習することによって推定を行う事ができる．提案手法ではSSDとAAEにより変形ARマーカの大きさ，姿勢を推定できるように拡張する．
+
+\begin{figure}[ht]
+\vspace{-4zh}
+\setlength{\epsfxsize}{7.5cm}
+\centerline{\epsfbox{./eps/流れ.eps}}
+\vspace{3zh}
+\caption{提案手法の流れ}
+\label{flow}
+\vspace{-1.0zh}
+\end{figure}
+
+%---------------------------------------------------------------------------------------
+\sec{SSDによる検出}
+SSDのネットワークの説明する．始めは300$\times$300$\times$3の入力画像からVGG-16の畳み込み層の途中までを38$\times$38$\times$512の特徴マップを抽出する.ここで抽出した特徴マップをネットワークの次の層の入力とし、VGG-16の残りの畳み込み層と、3$\times$3$\times$1024、1$\times$1$\times$1024の畳み込みで19$\times$19$\times$1024の特徴マップを抽出する.同様に抽出した特徴マップを次の層に入力として特徴マップを抽出する．この方法を繰り返して合計6段階のサイズ違いの特徴マップを抽出する．そのため比較的小さい物体でも検出可能である．
+物体認識と位置決定の損失関数の和を小さくするように値を調整し学習する.
+次にSSDの損失関数の説明をする．
+\begin{eqnarray}
+\label{sonsitu}
+L(x, c, l, g)=\frac{1}{N}\left(L_{cls}(x, c)+\alpha L_{loc}(x, l, g)\right)
+\end{eqnarray}
+\ \ \ Nは正解ラベルと位置がマッチしたバウンディングボックスの数，Lclsは物体のクラス分けを行うconﬁdence lossを表し,ｘは正解ラベルとマッチしたら１になる，cはクロスエントロピー誤差である.
+$\alpha$は重み，Llocは物体の位置ずれを表すlocalization lossである．lは予測したボックスの中心のx,y,幅，高さを表し，gは正解ボックスの中心のx,y,幅，高さを表す.これらの和が小さくなるように学習する．
+
+
+
+
+%---------------------------------------------------------------------------------
+\sec{AAEによる姿勢推定}
+AAEは物体の三軸方向を推定するためのAutencoderである．推定までの全体的な流れを図(\ref{GG})に示す．
+Autencoderにより各姿勢情報を含むターゲット画像の潜在変数を学習時に蓄積しておき，検出時に獲得されたバウンディングボックスを切り取り，Autencoderに入力し得られた潜在変数と学習時に蓄積された潜在変数との，
+コサイン類似度を求めることによって最も近い値の潜在変数の姿勢情報を物体姿勢として推定する．
+
+\begin{figure}[ht]
+\vspace{-5zh}
+\setlength{\epsfxsize}{7.5cm}
+\centerline{\epsfbox{./eps/姿勢推定.eps}}
+\vspace{3zh}
+\caption{AAEによる姿勢推定}
+\label{GG}
+\vspace{-1.0zh}
+\end{figure}
+ネットワークは，入力画像128$\times$128のRGB画像を5$\times$5の畳み込みstride2である，
+AAEの学習の流れを図(\ref{BB})に示す．学習したい元画像となる平面状のARマーカの貼られた円柱の画像（a）を正解画像として用意し，元画像と同じ姿勢のARマーカを円柱に沿うように貼り付けた画像（b）を入力としてAutencoderにかけ出力（c）は（a）と誤差を取り（a）を再現するように学習を行う．
+
+
+
+\begin{figure}[ht]
+\vspace{-5zh}
+\setlength{\epsfxsize}{7.5cm}
+\centerline{\epsfbox{./eps/学習の流れ.eps}}
+\vspace{5zh}
+\caption{AAEの学習}
+\label{BB}
+\vspace{-1.0zh}
+\end{figure}
+
+%------------------------------------------------------------------------------
+
+
+\sec{評価実験}
+
+今後行う予定
+
+\sec{おわりに}
+本研究では，変形ARマーカの認識及び姿勢推定を提案し，機械学習によってARマーカの座標位置，姿勢を推定できる事を確認した．今後は，提案手法のよるリアルタイムでの三次元位置・姿勢の推定を研究を行う予定である．
+
+\markboth{参考文献}{}     %% BibTeX を使う
+%\bibliographystyle{jalpha}
+%\newcommand{\noop}[1]{}
+%\bibliographystyle{jabbrv}
+%\bibliography{ref}
+
+\begin{thebibliography}{1}
+{\scriptsize 
+\bibitem{hog+motion}
+Wei Liu，Dragomir Anguelov， Dumitru Erhan，Christian Szegedy，Scott Reed，Cheng-Yang Fu， Alexander C. Berg : ``SSD: Single Shot MultiBox Detector'', Proc. of ECCV, 2016.}
+
+{\scriptsize 
+\bibitem{pixel}
+Martin Sundermeyer {\em et al．}: ``Implicit 3D Orientation Learning for 6D Object Detection from RGB Images'', 
+Proc．of ECCV， 2016．}
+
+\end{thebibliography}
+\end{document}
