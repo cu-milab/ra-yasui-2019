@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.2-170924-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.12.1)  5 JAN 2021 10:12
+This is e-pTeX, Version 3.14159265-p3.7.2-170924-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.12.1)  10 JAN 2021 02:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -169,47 +169,50 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 23.
 
-(./eps/流れ.eps
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 46.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 46.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 46.
-Missing character: There is no ^^ef in font cmr9!
-Missing character: There is no ^^ac in font cmr9!
-Missing character: There is no ^^81 in font cmr9!
-(./eps/姿勢推定.eps
+(./eps/作図中.eps
 )
 (./eps/学習の流れ.eps
 )
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 68.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 68.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.76599pt on input line 68.
+(./eps/姿勢推定.eps
+)
+
+Underfull \hbox (badness 2096) in paragraph at lines 96--97
+[]\JY1/mc/m/n/8 評価結果を表 \OT1/cmr/m/n/8 1 \JY1/mc/m/n/8 に示す ． 結果は \O
+T1/cmr/m/n/8 10 \JY1/mc/m/n/8 枚の姿勢画像の
+ []
+
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 106.
+(Font)              scaled to size 6.72699pt on input line 134.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 112.
+(Font)              scaled to size 6.72699pt on input line 140.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 112.
+(Font)              scaled to size 6.72699pt on input line 140.
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 112.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 140.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 112.
+(Font)              scaled to size 6.72699pt on input line 140.
 LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 112.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 140.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 112.
+(Font)              scaled to size 6.72699pt on input line 140.
 [1
 
 
 
 ] (./abstract.aux) ) 
 Here is how much of TeX's memory you used:
- 1075 strings out of 493628
- 12569 string characters out of 6150204
- 79372 words of memory out of 5000000
- 4692 multiletter control sequences out of 15000+600000
+ 1077 strings out of 493628
+ 12581 string characters out of 6150204
+ 81372 words of memory out of 5000000
+ 4694 multiletter control sequences out of 15000+600000
  12256 words of font info for 55 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 25i,7n,21p,546b,294s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 25i,8n,21p,484b,349s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on abstract.dvi (1 page, 9216 bytes).
+Output written on abstract.dvi (1 page, 10168 bytes).
