@@ -1,0 +1,125 @@
+
+\documentclass{graduation}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{epsf}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{indentfirst}
+\makeindex
+%----------------------------------------------
+\begin{document}
+
+\title{
+変形ARマーカの認識及び推定
+}
+%\etitle{}
+\author{ER17076 安井 理}
+%\eauthor{}
+\date{2021年2月12日} %(卒業研究発表会の日時とする)
+\university{中部大学}
+\school{工学部ロボット理工学科}
+\degree{2021年度 卒業}
+\prof{山内 悠嗣}
+
+\frontmatter
+\maketitle
+
+%----------------------------------------------
+\setcounter{page}{1}
+\chapter*{はじめに}
+\label{chap:introduction}
+\input{./chapter/0}
+
+%----------------------------------------------
+
+%目次の生成
+\tableofcontents
+
+%図が無い場合には下記を削除し，図の目次を表示しないようにしてください
+\listoffigures
+%表が無い場合には下記を削除し，表の目次を表示しないようにしてください
+\listoftables
+
+
+%これ以降のページ番号の書体を変える設定
+\mainmatter
+
+%----------------------------------------------
+\chapter{1章の題目}
+\label{chap:1}
+\input{./chapter/1}
+%----------------------------------------------
+
+%----------------------------------------------
+\chapter{2章の題目}
+\label{chap:2}
+\input{./chapter/2}
+%----------------------------------------------
+
+%----------------------------------------------
+\chapter*{おわりに}
+\label{chap:10}
+\markboth{おわりに}{}
+\addcontentsline{toc}{chapter}{おわりに}
+\input{./chapter/10}
+%----------------------------------------------
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{謝　辞}
+\markboth{謝　辞}{}
+\addcontentsline{toc}{chapter}{謝　　辞}
+本研究を行うにあたり，終始懇切なるご指導を頂きました中部大学工学部 XXXXX教授に謹んで感謝します．
+次に，本論文の作成にあたり，有意義なご助言，ご指導頂いた
+XXXX大学工学部 XXXXX教授，
+XXXX大学大学院工学研究科情報工学専攻 XXXX氏に心から厚く御礼申し上げます．
+最後に，本研究において，助言や相談，実験データ取得に協力して頂いたXXXX研究室の皆様に感謝致します．
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\markboth{参考文献}{}     %% BibTeX を使う
+%\bibliographystyle{jalpha}
+%\newcommand{\noop}[1]{}
+%\bibliographystyle{jabbrv}
+\bibliographystyle{junsrt}
+\bibliography{reference}
+%\nocite{*}
+%\bibliography{./ref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 必要に応じて付録を作る
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \chapter*{付  録}
+% \markboth{付  録}{}
+% \addcontentsline{toc}{chapter}{付  録}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 必要に応じて論文目録を作る
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter         %%% 奥付
+\thispagestyle{empty}
+\vspace*{18cm}
+\begin{flushright}
+\begin{tabular}{r}
+\Hline
+%\large
+{変形ARマーカの認識及び姿勢推定}\\
+(中部大学工学部ロボット理工学科)\\
+ER17076\\
+安井　理\\
+2021年 2月12日\\ %(卒業研究発表会の日時とする)
+
+\Hline
+\end{tabular}
+\end{flushright}
+\end{document}
