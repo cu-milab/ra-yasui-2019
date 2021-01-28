@@ -1,0 +1,176 @@
+\documentclass{jsarticle}
+\usepackage{abst, epsf,graphicx, tabularx, ascmac}
+%\usepackage{comment}
+
+\newcommand{\bd}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\mysubsec}[1]{\noindent {\bf #1} \ \ }
+\newcommand{\down}[1]{\raisebox{-0.0mm}{{\scriptsize #1}}}
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+
+\title{変形ARマーカの認識及び姿勢推定}
+\prof{山内 悠嗣}
+\name{ER17076 安井理}
+
+\begin{document}
+\maketitle
+
+%-------------------------------------------------------------------------
+\sec{はじめに}
+現在QRコードやARマーカなどの2次元コードは，製造での工程管理，製品ピッキング棚卸やロボット認識機能等の広い分野で利用されている．しかし，2次元コードは，曲面や角などに貼った場合，歪みによる見え方の変化を引き起こし，認識精度が低下する問題を抱えている．
+本研究の前任者である鈴木が，Faster R-CNN[1]を用いて，ID，大きさ，変形度合い，半径の推定をした．
+
+本研究では機械学習を用いた変形AR マーカの
+認識及び姿勢推定を提案する．
+変形したAR マーカをSSD(Single ShotMultiBox Detector)[2]
+ によって学習することで，変形AR マーカを認識し，ID と位置を推定する．
+そして，Augument Autoencoder(AAE)[3]を用いた変形ARマーカの平面化及び姿勢推定を提案する．
+
+
+\sec{提案手法}
+本研究では円柱に張られたAR マーカの画像をSSD で学習し，歪んだAR マーカの認識を行いAR マーカのID と
+AR マーカが存在する座標を識別する．AAEは，変形ARマーカ画像を入力し，平面ARマーカ画像を出力するように学習する．姿勢推定では事前に学習したAAEに各姿勢ごとのARマーカ画像を入力し，潜在変数のデータベースを作成する．そして，SSDにより検出されたバウンディングボックスを128$\times$128ピクセルにリサイズを行い，学習済みのAAEに入力し，潜在変数を得る．変形ARマーカの潜在変数とデータベースの潜在変数の類似度を計算し，類似度からARマーカの姿勢を推定する．
+
+\begin{figure}[ht]
+\vspace{0zh}
+\setlength{\epsfxsize}{6.5cm}
+\centerline{\epsfbox{./eps/nagare.eps}}
+\vspace{-1zh}
+\caption{提案手法の流れ}
+\label{flow}
+\vspace{-2zh}
+\end{figure}
+
+%---------------------------------------------------------------------------------------
+\subsec{Augumented Autoencoder}
+AAEは，変化の加わった物体の画像を，変化を取り除いた画像として生成するように学習するAutencoderである．
+AAEの学習の流れを図\ref{BB}に示す．平面状のARマーカの貼られた円柱の画像（a）を正解画像として，
+(a)と同じ姿勢のARマーカを円柱に沿うように貼り付けた画像（b）をAAEに入力する．出力（c）は（a）と誤差を取り（a）を再現するように学習を行う．
+これによりAAEに変形ARマーカを入力したときに，同じ姿勢の平面状のARマーカを出力可能になる．
+
+\begin{figure}[ht]
+\vspace{0zh}
+\setlength{\epsfxsize}{7.5cm}
+\centerline{\epsfbox{./eps/学習の流れ.eps}}
+\vspace{0zh}
+\caption{AAEの学習}
+\label{BB}
+\vspace{-2zh}
+\end{figure}
+
+
+
+
+%---------------------------------------------------------------------------------
+\subsec{AAEによる姿勢推定}
+姿勢推定の流れを図\ref{GG}に示す．
+姿勢推定は，ターゲット画像の潜在変数と姿勢データベースの潜在変数の類似度を利用して行う．
+姿勢データベースは各姿勢のARマーカ画像をAAEに入力し，獲得した潜在変数$z_n$を蓄積することで作成する．
+本研究ではARマーカの姿勢をrollを0$\sim$360度, pitchを-35$\sim$35度, yawを-15$\sim15$度の範囲に設定した．
+変形ARマーカの潜在変数$z_{test}$と姿勢データベースの潜在変数との
+コサイン類似度を式(1)により計算する．そして，最も近い潜在変数の姿勢情報を物体姿勢として決定する．
+%\footnotesize{
+\begin{eqnarray}
+\label{cos}
+cos_n=\frac{z_n z_{test}}{||z_n|| ||z_{test}||}
+%=\frac{x_1x'_1+\cdots+x_n x'_n}{\sqrt{x^2_1+\cdots+x'^2_n}\sqrt{x^2_1+\cdots+x'^2_n}}
+\end{eqnarray}
+
+
+\begin{figure}[ht]
+\vspace{0zh}
+\setlength{\epsfxsize}{7.5cm}
+\centerline{\epsfbox{./eps/姿勢推定.eps}}
+\vspace{0zh}
+\caption{姿勢推定の流れ}
+\label{GG}
+\vspace{-1.0zh}
+\end{figure}
+
+%------------------------------------------------------------------------------
+
+
+\sec{評価実験}
+
+
+提案手法の有効性を確認するために評価実験を行う．
+評価方法としてgazeboのシミュレーション空間上にARマーカを円柱に張り付けたモデルを表示し，撮影を行う．
+ARマーカのモデルは，半径20,30,40,50[mm]の円柱を各モデル姿勢100枚ずつ用意する．
+撮影されたモデル画像をSSDによって検出し，その際に得られたバウンディングボックスの画像を128$\times$128にリサイズし，使用する．
+バウンディングボックスの画像を入力として提案手法により姿勢推定を行う．評価用画像のモデル姿勢と提案手法により推定された姿勢の[roll,pitch,yaw]を比較し平均平方二乗誤差(RMSE)により評価する．
+
+評価結果を表\ref{hyouka}に示す．各半径どれも3度前後の誤差が生じるという結果となった．
+%３画像の復元は正確に行えていることから，データベースからの決定時に誤差が乗じていると考えられる．
+
+%と平均絶対誤差（MAE）
+
+
+
+\begin{table}[h]
+        \vspace{0zh}
+          \begin{center}
+            \caption{提案手法における姿勢推定の精度}
+            \label{hyouka}
+            \begin{tabular}{c|c|c|c|c} \hline
+              円柱半径[mm]   &平均誤差& roll& pitch & yaw \\ \hline
+              20&3.37& 3.64 & 4.12 & 2.37 \\ \hline
+              30&3.36 &2.96 & 3.98 & 3.16 \\ \hline
+              40&3.61 &3.57 &5.12  &2.14 \\ \hline
+              \end{tabular}
+          \end{center}
+        \vspace{-1.0zh}
+\end{table}
+
+%\begin{table}[h]
+        %\vspace{-1.8zh}
+         % \begin{center}
+       %     \caption{MAE}
+       %     \label{hyouka2}
+     %       \begin{tabular}{l|c|c|c} \hline
+   %           円柱半径[mm]   & roll& pitch & yaw \\ \hline
+ %20  & 2.43° & 2.2° & 2.5° \\ \hline
+         %     30  & 0° & 1° & 2.2° \\ \hline
+       %       40  & 1° & 1° & 1° \\ \hline
+     %         50  & 0°& 2° & 1° \\ \hline
+   %           \end{tabular}
+ %         \end{center}
+ %       \vspace{-1.0zh}
+%\end{table}
+
+
+
+
+
+\sec{おわりに}
+本研究では，変形ARマーカの認識及び姿勢推定を提案し，機械学習によってARマーカの座標位置，姿勢を推定できる事を確認した．今後は，提案手法のよる実世界での姿勢推定を研究を行う予定である．
+
+\markboth{参考文献}{}     %% BibTeX を使う
+%\bibliographystyle{jalpha}
+%\newcommand{\noop}[1]{}
+%\bibliographystyle{jabbrv}
+%\bibliography{ref}
+
+\begin{thebibliography}{1}
+%{\scriptsize 
+%\bibitem{hog+motion}
+%Wei Liu，Dragomir Anguelov， Dumitru Erhan，Christian Szegedy，Scott Reed，Cheng-Yang Fu， Alexander C. Berg : ``SSD: Single Shot MultiBox Detector'', Proc. of ECCV, 2016.}
+
+{\scriptsize
+\bibitem{fasterrcnn}
+S.Ren {\em et al. }: ``Faster R-CNN: Towards Real-Time Object Detectionwith Region Proposal Networks'', Proc. of NIPS，2015.}
+
+
+{\scriptsize
+\bibitem{hog+motion}
+W．Liu　{\em et al. }: "SSD: Single Shot MultiBox Detector", ECCV,2016.}
+
+{\scriptsize 
+\bibitem{pixel}
+Martin Sundermeyer {\em et al．}: ``Implicit 3D Orientation Learning for 6D Object Detection from RGB Images'', ECCV， 2016．}
+
+\end{thebibliography}
+\end{document}
