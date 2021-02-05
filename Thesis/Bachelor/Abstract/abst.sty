@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\topmargin}{-10.4mm}
+\setlength{\headheight}{0.0mm}
+\setlength{\headsep}{0.0mm}
+\setlength{\textheight}{267mm}
+\setlength{\textwidth}{165mm}
+\setlength{\oddsidemargin}{-0.4mm}
+\setlength{\columnsep}{8mm}
+\pagestyle{empty}
+\twocolumn
+
+\def\maketitle{
+ \twocolumn
+ [
+ \begin{center}
+ {\@title \par}
+ %\vspace{-1.0zw}
+ {\@name}
+ \vspace{-2.4zw}
+ \begin{flushright}{\gt 指導教授：\@prof}\end{flushright}
+ %\vspace{-1.0zw}
+ \end{center}
+ ]
+ \small
+ }
+
+\def\title#1{\gdef\@title{\gt #1}}
+\def\prof#1{\gdef\@prof{\gt #1}}
+\def\name#1{\gdef\@name{\uppercase{\gt #1}}}
+
+\def\sec#1{\section{\underline{#1}}}
+\def\section{%
+ \@startsection{section}{1}%
+ {.0zw}%
+ {0.0\Cvs}%
+ {0.1\Cvs}%
+ {\vspace{-0.5zw}\normalsize\bfseries}%
+}
+
+\def\thesection{%
+	\arabic{section}%
+	.%
+	\hspace{-1.1zw}%
+}
+
+\def\subsec#1{\subsection{#1}}
+\def\subsection{
+ \@startsection{subsection}{2}
+ {-0.0\Cvs}%
+ {0.0\Cvs}%
+ {0.1\Cvs}%
+ {\vspace{-0.5zw}\normalsize\bfseries}
+}
+\def\thesubsection{%
+	\thesection\hspace{1.2zw}%
+	\arabic{subsection}%
+	.%
+	\hspace{-1.1zw}%
+}
+
+\def\?{\phantom{0}}
+
+\newenvironment{tbl} 
+               {\begin{table}[ht]\small}
+				   {\end{table}}
+
+
+\long\def\@makecaption#1#2{%
+   \vskip\abovecaptionskip%
+   \sbox\@tempboxa{\small#1 : #2}%
+   \global \@minipagefalse%
+   \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+\vskip\belowcaptionskip}
+
