@@ -1,0 +1,36 @@
+This is e-pTeX, Version 3.14159265-p3.7.2-170924-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.12.1)  4 FEB 2021 13:22
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./2.tex
+(./2.tex
+pLaTeX2e <2017/10/28>+2 (based on LaTeX2e <2017-04-15>)
+Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 本
+      章では本手法で扱う姿勢推定の従来法の説明をする．
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.3 本
+      章では本手法で扱う姿勢推定の従来法の説明をする．
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 6 strings out of 493628
+ 154 string characters out of 6150204
+ 54736 words of memory out of 5000000
+ 3701 multiletter control sequences out of 15000+600000
+ 7511 words of font info for 31 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 5i,0n,4p,60b,14s stack positions out of 5000i,500n,10000p,500000b,80000s
+No pages of output.

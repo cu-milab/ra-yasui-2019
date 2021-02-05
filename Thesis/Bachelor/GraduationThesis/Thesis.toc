@@ -1,0 +1,27 @@
+\contentsline {chapter}{\numberline {第1章}ARマーカについて}{1}
+\contentsline {section}{\numberline {1.1}2次元コード}{1}
+\contentsline {subsection}{\numberline {1.1.1}2次元コードの認識}{1}
+\contentsline {subsection}{\numberline {1.1.2}２次元コードの問題点}{2}
+\contentsline {section}{\numberline {1.2}ARマーカ}{2}
+\contentsline {chapter}{\numberline {第2章}機械学習を用いた姿勢推定}{4}
+\contentsline {section}{\numberline {2.1}６次元物体検出}{4}
+\contentsline {subsection}{\numberline {2.1.1}Augumented Autoencoder}{4}
+\contentsline {subsection}{\numberline {2.1.2}AAEを用いた姿勢推定}{6}
+\contentsline {chapter}{\numberline {第3章}提案手法}{8}
+\contentsline {section}{\numberline {3.1}変形ARマーカの姿勢推定}{8}
+\contentsline {subsection}{\numberline {3.1.1}学習}{9}
+\contentsline {subsection}{\numberline {3.1.2}提案手法による姿勢推定}{10}
+\contentsline {section}{\numberline {3.2}学習データの作成}{10}
+\contentsline {subsection}{\numberline {3.2.1}ARマーカの作成}{11}
+\contentsline {subsection}{\numberline {3.2.2}変形ARマーカモデル}{12}
+\contentsline {subsection}{\numberline {3.2.3}学習用画像の撮影}{14}
+\contentsline {chapter}{\numberline {第4章}評価実験}{15}
+\contentsline {section}{\numberline {4.1}実験概要}{15}
+\contentsline {section}{\numberline {4.2}実験環境}{16}
+\contentsline {section}{\numberline {4.3}実験結果}{16}
+\contentsline {subsection}{\numberline {4.3.1}提案手法による復元結果}{16}
+\contentsline {subsection}{\numberline {4.3.2}提案手法を用いた姿勢推定結果}{20}
+\contentsline {section}{\numberline {4.4}考察}{20}
+\contentsline {chapter}{おわりに}{21}
+\contentsline {chapter}{謝　　辞}{22}
+\contentsline {chapter}{参考文献}{23}

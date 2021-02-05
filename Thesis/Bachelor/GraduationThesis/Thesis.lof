@@ -1,0 +1,29 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces ARマーカ．}}{3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 6次元物体検出．}}{5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces AAEの学習\cite {AAE}．}}{6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces AAEのネットワーク\cite {AAE}．}}{6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 訓練データ．}}{8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 教師データ．}}{9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 提案手法の学習の流れ．}}{9}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces データベースの作成．}}{10}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 提案手法による推定．}}{10}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 使用するマーカモデル．}}{11}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 使用するARマーカ．}}{11}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces blenderを用いた円柱作成．}}{12}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 円柱の設定．}}{13}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces 円柱の底面の削除．}}{13}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces 変形ARマーカの完成図．}}{14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces ID0の復元結果．}}{16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces ID1の復元結果．}}{17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces ID2の復元結果．}}{17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces ID3の復元結果．}}{17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces ID4の復元結果．}}{18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ID5の復元結果．}}{18}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ID6の復元結果．}}{18}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces ID7の復元結果．}}{19}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ID8の復元結果．}}{19}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces ID9の復元結果．}}{19}

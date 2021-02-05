@@ -1,0 +1,57 @@
+This is pBibTeX, Version 0.99d-j0.33 (sjis.euc) (TeX Live 2017/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Thesis.aux
+The style file: junsrt.bst
+Database file #1: reference.bib
+Warning--entry type for "ga" isn't style-file defined
+--line 118 of file reference.bib
+Warning--entry type for "bl" isn't style-file defined
+--line 125 of file reference.bib
+Warning--I didn't find a database entry for "o"
+Warning--empty journal in 1
+Warning--empty year in 1
+Warning--empty journal in suzuki
+Warning--empty year in suzuki
+You've used 15 entries,
+            2270 wiz_defined-function locations,
+            627 strings with 6836 characters,
+and the built_in function-call counts, 5794 in all, are:
+= -- 454
+> -- 201
+< -- 21
++ -- 77
+- -- 62
+* -- 305
+:= -- 684
+add.period$ -- 43
+call.type$ -- 15
+change.case$ -- 15
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 346
+empty$ -- 536
+format.name$ -- 124
+if$ -- 1428
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 13
+newline$ -- 74
+num.names$ -- 13
+pop$ -- 130
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 291
+stack$ -- 0
+substring$ -- 371
+swap$ -- 125
+text.length$ -- 21
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 46
+width$ -- 17
+write$ -- 153
+is.kanji.str$ -- 190
+(There were 7 warnings)

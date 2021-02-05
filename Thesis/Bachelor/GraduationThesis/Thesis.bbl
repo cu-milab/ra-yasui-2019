@@ -1,0 +1,91 @@
+\begin{thebibliography}{10}
+
+\bibitem{1}
+Tomohiro NISHINO, Mitsuharu KOJIMA, Yohei KAKIUCHI, Kimitoshi YAMAZAKI, Kei
+  OKADA, and Masayuki INABA.
+\newblock Qr コードを物品の目印として利用する日常支援ロボットの構想と視野中の
+  qr コードの発見.
+
+\bibitem{2}
+中里祐介, 神原誠之, 横矢直和.
+\newblock 不可視マーカを用いた位置・姿勢推定システムの構築および評価.
+\newblock 電子情報通信学会技術研究報告, MVE2007-50, pp. 73--78, 2007.
+
+\bibitem{3}
+中里祐介, 神原誠之, 横矢直和.
+\newblock
+  不可視マーカを用いた位置・姿勢推定のための環境構築とユーザ位置・姿勢推定システム
+  (「複合現実感 4」 特集).
+\newblock 日本バーチャルリアリティ学会論文誌, Vol.~13, No.~2, pp. 257--266,
+  2008.
+
+\bibitem{4}
+白山晋, 大澤理恵.
+\newblock 不可視マーカを利用した室内環境における人物の位置追跡法に関する研究.
+\newblock 可視化情報学会論文集, Vol.~37, No.~2, pp. 1--10, 2017.
+
+\bibitem{5}
+小野智司, 川上雄大, 伊藤拓也, 藤田晋輔, 中山茂, 川崎洋ほか.
+\newblock ゆがんだ二次元コードの復号による廃棄物認識 (< 特集> グリーン ai).
+\newblock 人工知能学会誌, Vol.~28, No.~4, pp. 575--582, 2013.
+
+\bibitem{6}
+小野智司, 川上雄大, 伊藤拓也, 澤井陽輔, 川崎洋, 中山茂.
+\newblock ゴミ袋に貼付された歪んだ 2 次元コードの復号.
+\newblock  人工知能学会全国大会論文集 第 26 回全国大会 (2012), pp.
+  3F1OS196--3F1OS196. 一般社団法人 人工知能学会, 2012.
+
+\bibitem{7}
+川上雄大, 伊藤拓也, 澤井陽輔, 小野智司, 川崎洋, 中山茂.
+\newblock 歪みの補正を目的とした補助線入り二次元コードとその復号方式の提案.
+\newblock 電子情報通信学会技術研究報告. PRMU, パターン認識・メディア理解, Vol.
+  111, No. 499, pp. 241--246, 2012.
+
+\bibitem{suzuki}
+鈴木舞香.
+\newblock 機械学習による変形arマーカの認識.
+
+\bibitem{SSD}
+Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed,
+  Cheng-Yang Fu, and Alexander~C Berg.
+\newblock Ssd: Single shot multibox detector.
+\newblock In {\em European conference on computer vision}, pp. 21--37.
+  Springer, 2016.
+
+\bibitem{AAE}
+Martin Sundermeyer, Zoltan-Csaba Marton, Maximilian Durner, Manuel Brucker, and
+  Rudolph Triebel.
+\newblock Implicit 3d orientation learning for 6d object detection from rgb
+  images.
+\newblock In {\em Proceedings of the European Conference on Computer Vision
+  (ECCV)}, pp. 699--715, 2018.
+
+\bibitem{AE}
+Geoffrey~E Hinton and Ruslan~R Salakhutdinov.
+\newblock Reducing the dimensionality of data with neural networks.
+\newblock {\em science}, Vol. 313, No. 5786, pp. 504--507, 2006.
+
+\bibitem{DAE}
+Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and Pierre-Antoine Manzagol.
+\newblock Extracting and composing robust features with denoising autoencoders.
+\newblock In {\em Proceedings of the 25th international conference on Machine
+  learning}, pp. 1096--1103, 2008.
+
+\bibitem{Dm}
+Jonathan Tremblay, Aayush Prakash, David Acuna, Mark Brophy, Varun Jampani, Cem
+  Anil, Thang To, Eric Cameracci, Shaad Boochoon, and Stan Birchfield.
+\newblock Training deep networks with synthetic data: Bridging the reality gap
+  by domain randomization.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition Workshops}, pp. 969--977, 2018.
+
+\bibitem{bl}
+{blender.org - Home of the Blender project - Free and Open 3D Creation
+  Software}.
+\newblock \url{https://www.blender.org/}.
+
+\bibitem{ga}
+{Gazebo}.
+\newblock \url{http://gazebosim.org/}.
+
+\end{thebibliography}
