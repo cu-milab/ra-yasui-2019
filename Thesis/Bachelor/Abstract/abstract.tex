@@ -69,18 +69,19 @@ AAEの学習方法は，はじめに，図\ref{BB}(b)をエンコーダーに入
 l=\frac{1}{n}\sum_{i＝１} ||x_i-x'_i||_2
 \end{eqnarray}
 
+ここで$l$は損失誤差を表しており，$n$はデータ数である．
+損失関数は，出力データ$x'_i$と教師データ$x_i$の平均2乗誤差を計算し求められる．
+
 \begin{figure}[ht]
-\vspace{0zh}
-\setlength{\epsfxsize}{7.5cm}
+\vspace{-1zh}
+\setlength{\epsfxsize}{6.5cm}
 \centerline{\epsfbox{./eps/学習の流れ.eps}}
 \vspace{0zh}
 \caption{AAEの学習の流れ}
 \label{BB}
-\vspace{-3zh}
+\vspace{-2zh}
 \end{figure}
 
-ここで$l$は損失誤差を表しており，$n$はデータ数である．
-損失関数は，出力データ$x'_i$と教師データ$x_i$の平均2乗誤差を計算し求められる．
 
 次に，エンコーダを用いて各姿勢のARマーカの潜在変数をDBに保存していく，
 ARマーカの姿勢をroll0$\sim$360度, pitch-35$\sim$35度, yaw-15$\sim15$度の範囲で設定し，
