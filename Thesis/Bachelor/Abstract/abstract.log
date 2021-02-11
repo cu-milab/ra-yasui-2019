@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.2-170924-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.12.1)  7 FEB 2021 08:00
+This is e-pTeX, Version 3.14159265-p3.7.2-170924-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2017.12.1)  11 FEB 2021 20:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -172,27 +172,27 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (./eps/nagare.eps
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 62.
+(Font)              <9> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 62.
+(Font)              <6> on input line 63.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 62.
+(Font)              scaled to size 5.76599pt on input line 63.
 (./eps/学習の流れ.eps
 )
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 197.
+(Font)              scaled to size 6.72699pt on input line 187.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 203.
+(Font)              scaled to size 6.72699pt on input line 193.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 203.
+(Font)              scaled to size 6.72699pt on input line 193.
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 203.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 193.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 203.
+(Font)              scaled to size 6.72699pt on input line 193.
 LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 203.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 193.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 203.
+(Font)              scaled to size 6.72699pt on input line 193.
 [1
 
 
@@ -205,6 +205,6 @@ Here is how much of TeX's memory you used:
  4694 multiletter control sequences out of 15000+600000
  12256 words of font info for 55 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 25i,7n,21p,364b,349s stack positions out of 5000i,500n,10000p,500000b,80000s
+ 25i,7n,21p,222b,349s stack positions out of 5000i,500n,10000p,500000b,80000s
 
-Output written on abstract.dvi (1 page, 10212 bytes).
+Output written on abstract.dvi (1 page, 10740 bytes).
