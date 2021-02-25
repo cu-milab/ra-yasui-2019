@@ -66,6 +66,7 @@ Research@Bachelor (2017 - 2021.4)
 
 ## Thesis
 |Date|Conference|Title|URL|
+|---|---|---|---|
 |20210214|卒業論文|変形ARマーカの位置姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Thesis/Bachelor/GraduationThesis/ER17076_Thesis.pdf)|
 |20210214|abustract|変形ARマーカの位置姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Thesis/Bachelor/Abstract/abstract.pdf)|
 |---|---|---|---|
