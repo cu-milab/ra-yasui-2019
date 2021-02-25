@@ -28,7 +28,9 @@ Research@Bachelor (2017 - 2021.4)
 |20201015|Augumented　Autencoder|ARマーカモデルの姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201015/10%E6%9C%8815%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
 |20201029|Augumented　Autencoder|AAEを用いた姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201029/10%E6%9C%8829%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
 |20201112|Augumented　Autencoder|変形ARマーカに対するAAE|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201112/11%E6%9C%8812%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
-
+|20201126|Augumented　Autencoder|pytorch AAE|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201126/11%E6%9C%8826%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20201210|Augumented　Autencoder|AAEを用いた変形ARマーカ復元|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20201210/12%E6%9C%8810%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
+|20210114|Augumented　Autencoder|変形ARマーカの姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Meeting/Bacher/20210114/1%E6%9C%8814%E6%97%A5%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.pdf)|
 
 
 
@@ -64,7 +66,8 @@ Research@Bachelor (2017 - 2021.4)
 
 ## Thesis
 |Date|Conference|Title|URL|
-|---|---|---|---|
+|20210214|卒業論文|変形ARマーカの位置姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Thesis/Bachelor/GraduationThesis/ER17076_Thesis.pdf)|
+|20210214|abustract|変形ARマーカの位置姿勢推定|[Link](https://github.com/cu-milab/ra-yasui-2019/blob/master/Thesis/Bachelor/Abstract/abstract.pdf)|
 |---|---|---|---|
 
 ## Report to company
